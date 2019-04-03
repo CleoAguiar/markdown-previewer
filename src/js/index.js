@@ -14,10 +14,17 @@ class App extends React.Component
 	{
 		super(props);
 		this.state = {
+			markdown: placeholder,
 			editor: false
 		};
 
+		this.handleChange = this.handleChange.bind(this);
 		this.handleEditor = this.handleEditor.bind(this);
+	}
+
+	handleChange(el)
+	{
+		this.setState({ markdown: el.target.value });
 	}
 
 	handleEditor()
@@ -29,16 +36,19 @@ class App extends React.Component
 
 	render() 
 	{
-		return e('div', null, [e(Editor), e(Preview)] );
+		return e('div', null, 
+					[e(Editor, { markdown: this.state.markdown, onChange: this.handleChange }), 
+			 	 	e(Preview, { markdown: this.state.markdown})] 
+			 	);
 	}
 }
 
 const Editor = (props) => {
-	return e('textarea', { id: 'editor' }, placeholder);
+	return e('textarea', { id: 'editor', value: props.markdown, onChange: props.onChange });
 };
 
 const Preview = (props) => {
-	return e('div', { id: 'preview' }, 'oi mundo')
+	return e('div', { id: 'preview' }, props.markdown);
 };
 
 const domContainer = document.querySelector('#app');
