@@ -7,12 +7,6 @@ const placeholder =
 ## This is my Second Front End Project FreeCodeCamp
 `
 
-class Hello extends React.Component 
-{
-	render() {
-		return e('div', null, `Hello ${this.props.toWhat}`);
-  	}
-}
 
 class App extends React.Component
 {
