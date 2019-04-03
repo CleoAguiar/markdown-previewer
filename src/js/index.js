@@ -1,36 +1,45 @@
 'use strict';
 
 const e = React.createElement;
+const placeholder = 
+`# Welcome to my React Markdown Previewer!
 
-class Hello extends React.Component {
+## This is my Second Front End Project FreeCodeCamp
+`
+
+class Hello extends React.Component 
+{
 	render() {
-		return React.createElement('div', null, `Hello ${this.props.toWhat}`);
+		return e('div', null, `Hello ${this.props.toWhat}`);
   	}
+}
+
+class App extends React.Component
+{
+	constructor (props)
+	{
+		super(props);
+		this.state = {
+			editor: false
+		};
+	}
+
+	render() 
+	{
+		if (this.state.editor)
+			return 'Your editor';
+
+		return e(
+			'textarea',
+			{ id: 'editor'},
+			placeholder
+		);
+	}
 }
 
 const domContainer = document.querySelector('#app');
 
 ReactDOM.render(
-	e(Hello, {toWhat: 'User'}, null),
+	e(App),
 	domContainer
 );
-
-
-// window.onload = function(){
-// 	alert("oi");
-
-// 	class Greetings extends React.Component
-	// {
-	// 	render()
-	// 	{
-	// 		return(
-	// 			<h1>Greetings, {this.props.name}!</h1>
-	// 		);
-	// 	}
-	// }
-
-	// ReactDOM.render(
-	// 	<Greetings name="Chris" />,
-	// 	document.getElementById('app')
-	// );
-// };
