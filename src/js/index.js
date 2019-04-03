@@ -35,13 +35,17 @@ class App extends React.Component
 
 	render() 
 	{
-		return e(
-			'textarea',
-			{ id: 'editor'},
-			placeholder
-		);
+		return e('div', null, [e(Editor), e(Preview)] );
 	}
 }
+
+const Editor = (props) => {
+	return e('textarea', { id: 'editor' }, placeholder);
+};
+
+const Preview = (props) => {
+	return e('div', { id: 'preview' }, 'oi mundo')
+};
 
 const domContainer = document.querySelector('#app');
 
