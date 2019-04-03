@@ -22,13 +22,19 @@ class App extends React.Component
 		this.state = {
 			editor: false
 		};
+
+		this.handleEditor = this.handleEditor.bind(this);
+	}
+
+	handleEditor()
+	{
+		this.setState({
+			editor: !this.state.editor
+		});
 	}
 
 	render() 
 	{
-		if (this.state.editor)
-			return 'Your editor';
-
 		return e(
 			'textarea',
 			{ id: 'editor'},
