@@ -1,25 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Add React in One Minute</title>
-  </head>
-  <body>
+'use strict';
 
-    <h2>Add React in One Minute</h2>
-    <p>This page demonstrates using React with no build tooling.</p>
-    <p>React is loaded as a script tag.</p>
+const e = React.createElement;
 
-    <!-- We will put our React component inside this div. -->
-    <div id="like_button_container"></div>
+class Hello extends React.Component {
+	render() {
+		return React.createElement('div', null, `Hello ${this.props.toWhat}`);
+  	}
+}
 
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+const domContainer = document.querySelector('#app');
 
-    <!-- Load our React component. -->
-    <script src="like_button.js"></script>
+ReactDOM.render(
+	e(Hello, {toWhat: 'User'}, null),
+	domContainer
+);
 
-  </body>
-</html>
+
+// window.onload = function(){
+// 	alert("oi");
+
+// 	class Greetings extends React.Component
+	// {
+	// 	render()
+	// 	{
+	// 		return(
+	// 			<h1>Greetings, {this.props.name}!</h1>
+	// 		);
+	// 	}
+	// }
+
+	// ReactDOM.render(
+	// 	<Greetings name="Chris" />,
+	// 	document.getElementById('app')
+	// );
+// };
