@@ -78,7 +78,7 @@ const Editor = (props) => {
 };
 
 const Preview = (props) => {
-	return e('div', { id: 'preview' }, props.markdown);
+	return e('div', { id: 'preview', dangerouslySetInnerHTML: {__html: props.markdown } });
 };
 
 const domContainer = document.querySelector('#app');
