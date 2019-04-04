@@ -1,3 +1,4 @@
+'usr marked';
 'use strict';
 
 const e = React.createElement;
@@ -68,7 +69,7 @@ class App extends React.Component
 	{
 		return e('div', null, 
 					[e(Editor, { markdown: this.state.markdown, onChange: this.handleChange }), 
-			 	 	e(Preview, { markdown: this.state.markdown})] 
+			 	 	e(Preview, { markdown: this.state.markdown}) ] 
 			 	);
 	}
 }
@@ -78,7 +79,7 @@ const Editor = (props) => {
 };
 
 const Preview = (props) => {
-	return e('div', { id: 'preview', dangerouslySetInnerHTML: {__html: props.markdown } });
+	return e('div', { id: 'preview', dangerouslySetInnerHTML: {__html: marked(props.markdown, {sanitize: true}) } });
 };
 
 const domContainer = document.querySelector('#app');
