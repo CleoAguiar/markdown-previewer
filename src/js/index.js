@@ -3,11 +3,7 @@
 
 const e = React.createElement;
 const placeholder = 
-`# Welcome to my React Markdown Previewer!
-
-## This is my Second Front End Project FreeCodeCamp
-
-Heading
+`Heading
 =======
 
 Sub-heading
