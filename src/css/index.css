@@ -1,21 +1,23 @@
 body {
-	margin: 20px 15px;
+	margin: 20px 20px 40px;
   	background: #2c3e50;
   	color: #fff;
 }
 
 textarea {
-  margin: 0;
-  width: 45%;
-  color: #000;
-  height: 480px;
-  float: left;
+	margin: 0;
+ 	width: 45%;
+  	color: #000;
+  	height: 480px;
+  	float: left;
 }
 
 #preview {
 	margin: 0;
+	border: 1px solid;
 	float: left;
 	margin-left: 5%;
 	width: 45%;
 	height: 480px;
+	overflow: auto;
 }
