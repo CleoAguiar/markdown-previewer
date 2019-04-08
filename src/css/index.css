@@ -4,6 +4,10 @@ body {
   	color: #fff;
 }
 
+#header {
+	text-align: center;
+}
+
 textarea {
 	margin: 0;
  	width: 45%;
