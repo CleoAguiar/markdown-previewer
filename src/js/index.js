@@ -64,10 +64,18 @@ class App extends React.Component
 	render() 
 	{
 		return e('div', null, 
-					[e(Editor, { markdown: this.state.markdown, onChange: this.handleChange }), 
+					[e(Header),
+					e(Editor, { markdown: this.state.markdown, onChange: this.handleChange }), 
 			 	 	e(Preview, { markdown: this.state.markdown}) ] 
 			 	);
 	}
+}
+
+const Header = () => {
+	return ('div', {id: 'header'},
+			[e('h2',null, 'Welcome to my React Markdown Previewer!'),
+			e('p', null, 'This page is my Second Front End Project FreeCodeCamp using React')]
+			);
 }
 
 const Editor = (props) => {
