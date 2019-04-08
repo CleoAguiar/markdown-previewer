@@ -72,7 +72,7 @@ class App extends React.Component
 }
 
 const Header = () => {
-	return ('div', {id: 'header'},
+	return e('div', { id: 'header' },
 			[e('h2',null, 'Welcome to my React Markdown Previewer!'),
 			e('p', null, 'This page is my Second Front End Project FreeCodeCamp using React')]
 			);
