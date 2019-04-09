@@ -10,9 +10,9 @@ const placeholder =
 
 Text attributes *italic*, **bold**,~~strikethrough~~ .
 
-[I'm an inline-style link](https://www.google.com)
+[I'm an inline-style link](https://github.com/CleoAguiar)
 
-Inline code has back-ticks around it. ??????
+Inline code has back-ticks around it.
 ${'```'}python
 s = "Python syntax highlighting"
 print s

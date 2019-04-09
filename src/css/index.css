@@ -19,6 +19,11 @@ textarea, #preview {
 	overflow: auto;
 }
 
+#preview {
+	background: #fff;
+  	color: #000;
+}
+
 #footer {
 	padding: 20px;
 	clear: both;
