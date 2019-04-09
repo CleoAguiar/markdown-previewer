@@ -65,9 +65,9 @@ class App extends React.Component
 	{
 		return e('div', null, 
 					[e(Header),
-					e(Editor, { markdown: this.state.markdown, onChange: this.handleChange }), 
-			 	 	e(Preview, { markdown: this.state.markdown}),
-			 	 	e(Footer),] 
+					 e(Editor, { markdown: this.state.markdown, onChange: this.handleChange }), 
+			 	 	 e(Preview, { markdown: this.state.markdown}),
+			 	 	 e(Footer)] 
 			 	);
 	}
 }
@@ -91,9 +91,8 @@ const Footer = () => {
 	return e('div', { id: 'footer' }, 
 		[ String.fromCharCode(169), // copyright symbol &#169;
 		  ' 2019 ' ,
-		  e('a', {href: 'http://cleoaguiar.github.io'}, 
-		  'Cleo Aguiar'), 
-		  '. All rights reserved.'],
+		  e('a', {href: 'http://cleoaguiar.github.io'}, 'Cleo Aguiar'), 
+		  '. All rights reserved.']
 		);
 };
 

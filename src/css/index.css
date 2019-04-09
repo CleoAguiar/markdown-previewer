@@ -4,24 +4,22 @@ body {
   	color: #fff;
 }
 
-#header {
+#header, #footer {
+	margin-bottom: 10px;
 	text-align: center;
 }
 
-textarea {
+textarea, #preview {
 	margin: 0;
  	width: 45%;
-  	color: #000;
   	height: 480px;
   	float: left;
+  	margin-left: 3%;
+	border: 1px solid;
+	overflow: auto;
 }
 
-#preview {
-	margin: 0;
-	border: 1px solid;
-	float: left;
-	margin-left: 5%;
-	width: 45%;
-	height: 480px;
-	overflow: auto;
+#footer {
+	padding: 20px;
+	clear: both;
 }
