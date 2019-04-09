@@ -6,32 +6,34 @@ const placeholder =
 `Heading
 =======
 
-Sub-heading
------------
-
-### Another deeper heading
-
-Paragraphs are separated
-by a blank line.
-
-Leave 2 spaces at the end of a line to do a  
-line break
+## Sub-heading
 
 Text attributes *italic*, **bold**,~~strikethrough~~ .
+
+[I'm an inline-style link](https://www.google.com)
+
+Inline code has back-ticks around it. ??????
+${'```'}python
+s = "Python syntax highlighting"
+print s
+${'```'}
 
 Shopping list:
 
 * apples
 * oranges
 * pears
+
 Numbered list:
 
 1. apples
 2. oranges
 3. pears
 
-The rain---not the reign---in
-Spain.
+> Markdown uses email-style > characters for blockquoting.
+
+![Image](https://github.com/dcurtis/markdown-mark/blob/master/png/66x40.png?raw=true "icon")
+
 `
 
 
