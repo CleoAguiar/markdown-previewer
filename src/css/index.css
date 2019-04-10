@@ -31,7 +31,7 @@ textarea, #preview {
 
 @media only screen and (max-device-width: 768px) {
 	#header, #footer {
-		font-size: 72px;
+		font-size: 3em;
 	}
 
 	textarea, #preview {
@@ -39,5 +39,6 @@ textarea, #preview {
 		margin-bottom: 5%;
 		height: 800px;
 		clear: both;
+		font-size: 1.5em;
 	}
 }
