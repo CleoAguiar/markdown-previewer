@@ -35,8 +35,8 @@ textarea, #preview {
 	}
 
 	textarea, #preview {
-		width: 95%;
-		margin-bottom: 5%;
+		width: 90%;
+		margin: 5% 5%;
 		height: 800px;
 		clear: both;
 		font-size: 1.5em;
