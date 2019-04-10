@@ -28,3 +28,16 @@ textarea, #preview {
 	padding: 20px;
 	clear: both;
 }
+
+@media only screen and (max-device-width: 768px) {
+	#header, #footer {
+		font-size: 72px;
+	}
+
+	textarea, #preview {
+		width: 95%;
+		margin-bottom: 5%;
+		height: 800px;
+		clear: both;
+	}
+}
